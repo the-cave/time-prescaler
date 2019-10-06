@@ -16,8 +16,8 @@ typedef struct _time_prescaler8__state {
   uint8_t count;
 } TimePrescaler8_State;
 
-#define time_prescaler8__init(config, state)  \
-  do {                                        \
+#define time_prescaler8__init(config, state) \
+  do {                                       \
     (state)->count = (config)->reload_value; \
   } while (0)
 
