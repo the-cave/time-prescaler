@@ -10,8 +10,8 @@ void time_prescaler16__tick(TimePrescaler16_Config* config,
   if (state->count) {
     return;
   }
+  state->count = config->reload_value;
   if (config->target) {
     config->target();
   }
-  state->count = config->reload_value;
 }
